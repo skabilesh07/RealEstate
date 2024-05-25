@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        #footer{
+            background-color: rgb(44, 42, 42);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .recent-activities {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        /* Style for table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+        }
+
+        #footer {
+        background-color: rgb(44, 42, 42);
+        color: white;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        }
+
+        .d {
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Update your Profile</h1>
+    </header>
+    <div class="container">
+        <div class="profile-container">
+            <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Login info</h3>
+                <form action="/updateprofile" method="POST">
+                    <form class="px-md-2">
+
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form3Example1q" class="form-control" name="uname" />
+                            <label class="form-label" for="form3Example1q">Name</label>
+                        </div>
+                        
+                        <div class="form-outline mb-4">
+                            <input type="tel" id="form3Example1q" class="form-control" name="uphoneno" pattern="[0-9]{10}" title="10 digits" />
+                            <label class="form-label" for="form3Example1q">phone-number</label>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+                    </form>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section id="footer">
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0 border-top ml-0 mr-0">
+                <p class="col-md-4 mb-0 text-warning">© Real Estate, Inc</p>
+
+                <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="/" class="nav-link px-2 text-warning">Home</a></li>
+                    <li class="nav-item"><a href="/aboutr" class="nav-link px-2  text-warning">about</a></li>
+                    <li class="nav-item"><a href="/Anlytical" class="nav-link px-2  text-warning">Anlytical</a></li>
+                </ul>
+            </footer>
+        </div>
+    </section>
+</body>
+
+</html>
